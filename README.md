@@ -1,6 +1,7 @@
 # voc-multilabel-resnet
 本项目基于 PyTorch 框架，在 PASCAL VOC 2007 数据集上实现了多标签图像分类。
 项目以标准的 ResNet-18 作为基线网络（Baseline），并进行了结构创新与消融实验研究：
+
 1.创新一 (SE-ResNet18)：引入 SE（Squeeze-and-Excitation）通道注意力机制，自适应校准通道特征响应。
 
 2.创新二 (SE-ResNet18 + GELU)：集成 GELU 激活函数，改善深层网络的非线性映射与梯度传播。
@@ -27,7 +28,7 @@ SE 模块通过显式建模特征通道之间的相互依赖关系，自适应�
 # 环境配置
 Python 3.8+ 以及带有 CUDA 支持的 PyTorch 环境。
 1. 克隆本仓库
-git clone https://github.com/your-username/voc-multilabel-resnet.git
+git clone https://github.com/Hanyuu-chae/voc-multilabel-resnet
 cd voc-multilabel-resnet
 
 2. 安装依赖库
@@ -36,6 +37,7 @@ pip install torch torchvision numpy
 # 数据集准备
 请下载 [PASCAL VOC 2007](https://www.kaggle.com/datasets/zaraks/pascal-voc-2007/suggestions)
  数据集，并将其解压按以下结构放置在项目目录中：
+```text
 train/
 └── VOCdevkit/
     └── VOC2007/
